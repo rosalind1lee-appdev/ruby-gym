@@ -37,3 +37,18 @@
 
 
 p "Enter an integer"
+num = gets.to_i
+
+if num % 3 == 0
+  print "Pling"
+end
+if num % 5 == 0
+  print "Plang"
+end
+if num % 7 == 0
+  print "Plong"
+end
+if num % 3 != 0 and num % 5 != 0 and num % 7 != 0
+  print "#{num}"
+end
+print "\n"
