@@ -14,3 +14,12 @@
 #  "Number of digits in the string is: 4"
 
 p "Enter a sentence:"
+sentence = gets.chomp
+sentence = sentence.downcase
+spaces = sentence.count(" ")
+digits = sentence.count("0123456789")
+letters = sentence.count("abcdefghijklmnopqrstuvwxyz")
+
+p "Number of letters in the string is: #{letters}"
+p "Number of spaces in the string is: #{spaces}"
+p "Number of digits in the string is: #{digits}"
