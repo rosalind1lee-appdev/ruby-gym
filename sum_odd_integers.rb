@@ -11,3 +11,14 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+nums = gets.chomp
+arrnums = nums.split.map(&:to_i)
+i = 0
+currsum = 0
+while i < arrnums.length
+  if arrnums[i] % 2 == 1
+    currsum = currsum + arrnums[i]
+  end
+  i = i + 1
+end
+p currsum
