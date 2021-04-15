@@ -23,5 +23,18 @@
 #   b.body = "Complementary metal-oxide semiconductor"
 #   b.abbreviate # => "CMOS"
 
+class Phrase
+  attr_accessor :body
 
-
+  def abbreviate
+    tempbody = self.body.gsub(/[^a-z0-9\s]/i, " ")
+    tokens = tempbody.split
+    i = 0
+    currstr = ""
+    while i<tokens.length
+      currstr += tokens[i].upcase[0]
+      i = i + 1
+    end
+    p currstr
+  end
+end
