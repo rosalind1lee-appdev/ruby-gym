@@ -7,3 +7,11 @@
 p "Enter two words separated by a comma"
 
 user_words = gets.chomp
+user_words = user_words.gsub(/\s+/, "")
+words = user_words.split(",")
+
+if words[0].chars.sort.join == words[1].chars.sort.join
+  p true
+else
+  p false
+end
