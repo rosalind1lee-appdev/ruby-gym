@@ -20,3 +20,19 @@
 #   String.isogram?("eleven") # => false
 #   String.isogram?("subdermatoglyphic") # => true
 
+class String
+  def String.isogram?(strarg)
+    strarg = strarg.downcase
+    strarg = strarg.gsub(/[^a-z0-9]/i, "")
+    i = 0
+    val = true
+    while i < strarg.length
+      if strarg.count(strarg[i]) > 1
+        val = false
+        break
+      end
+      i = i + 1
+    end
+    p val
+  end
+end
