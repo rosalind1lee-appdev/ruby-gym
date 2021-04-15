@@ -29,3 +29,18 @@
 #     (x-j)^2 + (y-k)^2 = r^2
 
 p "Enter X,Y coordinates in the format 'X,Y'"
+
+coords = gets.chomp
+stcoords = coords.split(",")
+x = stcoords[0].to_f
+y = stcoords[1].to_f
+r = Math.sqrt(x**2 + y**2)
+if r <= 1
+  p "10 points"
+elsif r <= 5
+  p "5 points"
+elsif r <= 10
+  p "1 points"
+else
+  p "0 points"
+end
